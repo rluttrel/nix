@@ -24,3 +24,5 @@ This is useful for having multiple setups and makes partitions easier to handle.
     sudo mount /dev/disk/by-label/NIXROOT /mnt
     sudo mkdir -p /mnt/boot
     sudo mount /dev/disk/by-label/NIXBOOT /mnt/boot
+
+    curl -o https://raw.githubusercontent.com/rluttrel/nix/main/configuration.nix
