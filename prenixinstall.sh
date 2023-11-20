@@ -1,10 +1,12 @@
+DISK=/dev/vda
 lsblk
 
-sudo fdisk /dev/sda
+sudo fdisk /dev/"$DISK"
 #delete all partitions
-sudo mkfs.fat -F 32 /dev/sda1
-sudo fatlabel /dev/sda1 NIXBOOT
-sudo mkfs.ext4 /dev/sda2 -L NIXROOT
+(echo g; echo n; echo 1; echo ""; echo +500M; echo t; echo 1; echo n; echo 2; echo ""; echo +5G; echo n; echo 3; echo ""; echo ""; echo p; echo w) | fdisk /dev/"$DISK"
+sudo mkfs.fat -F 32 /dev/"$DISK"1
+sudo fatlabel /dev/"$DISK"1 NIXBOOT
+sudo mkfs.ext4 /dev/"$DISK"2 -L NIXROOT
 sudo mount /dev/disk/by-label/NIXROOT /mnt
 sudo mkdir -p /mnt/boot
 sudo mount /dev/disk/by-label/NIXBOOT /mnt/boot
