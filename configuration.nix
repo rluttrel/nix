@@ -108,6 +108,9 @@
   #Enable Flatpak
   services.flatpak.enable = true;
 
+  #Enable WayDroid
+  virtualisation.waydroid.enable = true;
+
   #Enable Fish for all users
   programs.fish.enable = true;
   users.defaultUserShell = pkgs.fish;
