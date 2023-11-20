@@ -3,7 +3,7 @@ lsblk
 
 #sudo fdisk /dev/"$DISK"
 #delete all partitions
-(echo g; echo n; echo 1; echo ""; echo +500M; echo t; echo 1; echo n; echo 2; echo ""; echo ""; echo w) | fdisk /dev/sda | fdisk /dev/"$DISK"
+(echo g; echo n; echo 1; echo ""; echo +500M; echo t; echo 1; echo n; echo 2; echo ""; echo ""; echo w) | fdisk /dev/"$DISK"
 sudo mkfs.fat -F 32 /dev/"$DISK"1
 sudo fatlabel /dev/"$DISK"1 NIXBOOT
 sudo mkfs.ext4 /dev/"$DISK"2 -L NIXROOT
