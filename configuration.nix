@@ -69,6 +69,7 @@
     		oxygen
 		spectacle
     		khelpcenter
+		printmanager
  		];
 	};
 
