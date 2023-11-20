@@ -1,4 +1,4 @@
-DISK=/dev/vda
+DISK=vda
 lsblk
 
 sudo fdisk /dev/"$DISK"
