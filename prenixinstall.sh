@@ -1,7 +1,7 @@
 DISK=vda
 lsblk
 
-sudo fdisk /dev/"$DISK"
+#sudo fdisk /dev/"$DISK"
 #delete all partitions
 (echo g; echo n; echo 1; echo ""; echo +500M; echo t; echo 1; echo n; echo 2; echo ""; echo +5G; echo n; echo 3; echo ""; echo ""; echo p; echo w) | fdisk /dev/"$DISK"
 sudo mkfs.fat -F 32 /dev/"$DISK"1
