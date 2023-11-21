@@ -1,3 +1,11 @@
+# Get wifi up and running
+# ip a 
+# sudo touch /etc/wpa_supplicant.conf
+# sudo chmod 777 /etc/wpa_supplicant.conf
+# sudo wpa_passphrase SSID PASSWoRD > /etc/wpa_supplicant.conf
+# sudo wpa_supplicant -B -i  wlo1 -c /etc/wpa_supplicant.conf
+# ping 8.8.8.8  (may take a second)
+
 DISK=vda
 lsblk
 
