@@ -1,12 +1,12 @@
 # Nix OS minimal install
-sudo su
-nano /etc/wpa_supplicant.conf
-network={
-    ssid="ballnet"
-    psk="cowpigdonkey1"
-}
-ifconfig
-wpa_supplicant -B -i wlp0s20f3 -c /etc/wpa_supplicant.conf  
+#sudo su
+#nano /etc/wpa_supplicant.conf
+#network={
+#    ssid="ballnet"
+#    psk="cowpigdonkey1"
+#}
+#ifconfig
+#wpa_supplicant -B -i wlp0s20f3 -c /etc/wpa_supplicant.conf  
 
 
 #echo "Enter the termux ip address : "
