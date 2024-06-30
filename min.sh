@@ -20,6 +20,8 @@ export ftp_proxy="http://192.0.0.2:8080"
 
 curl www.google.com
 
+nix-shell -p git
+
 #Partition drive
 
 echo "Enter the drive name : "
